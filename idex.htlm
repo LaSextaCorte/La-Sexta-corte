@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La Sexta Corte | Barbería</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+    }
+
+    /* BARRA DE NAVEGACIÓN */
+    nav {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      background: #0b0b0b;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: calc(100vh - 75px);
+      display: flex;
+      align-items: center;
+      padding: 60px 7%;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.8)),
+        radial-gradient(circle at right, #29200b, #0b0b0b 55%);
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .tag {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(50px, 8vw, 90px);
+      line-height: .95;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 550px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #f0ce55;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #555;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    /* SERVICIOS */
+    .services {
+      padding: 90px 7%;
+      background: #111;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: #d4af37;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: #181818;
+      padding: 30px;
+      border: 1px solid #292929;
+      transition: .2s;
+    }
+
+    .card:hover {
+      border-color: #d4af37;
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #999;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      color: #d4af37;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 90px 7%;
+      text-align: center;
+      background: #0b0b0b;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 7%;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 0 5%;
+      }
+
+      nav .links {
+        display: none;
+      }
+
+      .hero {
+        padding: 50px 5%;
+      }
+
+      .services {
+        padding: 70px 5%;
+      }
+
+      .cta {
+        padding: 70px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      LA SEXTA <span>CORTE</span>
+    </div>
+
+    <div class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#reservar">Reservar</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+
+      <div class="tag">
+        Barbería & Estilo
+      </div>
+
+      <h1>
+        TU ESTILO.<br>
+        <span>TU CORTE.</span>
+      </h1>
+
+      <p>
+        Reserva tu próxima cita en La Sexta Corte.
+        Elige tu servicio, selecciona tu barbero
+        y encuentra el horario perfecto para ti.
+      </p>
+
+      <div class="buttons">
+        <a href="#reservar" class="btn btn-primary">
+          RESERVAR CITA
+        </a>
+
+        <a href="#servicios" class="btn btn-secondary">
+          VER SERVICIOS
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+
+    <div class="section-title">
+      <small>NUESTROS SERVICIOS</small>
+      <h2>Elige tu estilo</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">✂️</div>
+        <h3>Corte Clásico</h3>
+        <p>
+          Corte personalizado realizado
+          por nuestros barberos.
+        </p>
+        <div class="price">$25.000</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧔</div>
+        <h3>Barba</h3>
+        <p>
+          Perfilado y arreglo de barba
+          para complementar tu estilo.
+        </p>
+        <div class="price">$15.000</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔥</div>
+        <h3>Corte + Barba</h3>
+        <p>
+          El combo completo para salir
+          con un estilo renovado.
+        </p>
+        <div class="price">$35.000</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💈</div>
+        <h3>Diseño</h3>
+        <p>
+          Diseños y detalles personalizados
+          para tu corte.
+        </p>
+        <div class="price">$10.000</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta" id="reservar">
+
+    <h2>¿Listo para tu próximo corte?</h2>
+
+    <p>
+      Reserva tu cita de manera rápida y sencilla.
+    </p>
+
+    <a href="#" class="btn btn-primary">
+      RESERVAR AHORA
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 La Sexta Corte — Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
